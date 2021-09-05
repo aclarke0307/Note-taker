@@ -4,12 +4,22 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "server.js": "^1.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aclarke0307/Note-taker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aclarke0307/Note-taker/issues"
+  },
+  "homepage": "https://github.com/aclarke0307/Note-taker#readme"
 }
