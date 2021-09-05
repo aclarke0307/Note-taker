@@ -4,13 +4,13 @@ const fs = require('fs');
 const path = require('path');
 const express = require('express');
 const app = express();
-const addedNotes = require('./bd/bd.json');
+const addedNotes = require('./db/db.json');
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(express.static('public'));
 
-function newNote(body, noteArray){
+function newNotes(body, noteArray){
     const newNote = body;
 if(!Array.isArray(noteArray))
    noteArray =[];
@@ -28,7 +28,7 @@ if(noteArray.length === 0)
 }
 
 app.post('/api/notes', (req, res)=> {
-    const newNote = newNote(req.body, addedNotes);
+    const newNote = newNotes(req.body, addedNotes);
     res.json(newNote);
 })
 
