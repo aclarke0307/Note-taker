@@ -13,7 +13,11 @@ function newNote(body, noteArray){
     const addNote = body;
 if(!Array.isArray(noteArray))
    noteArray =[];
-
+if(noteArray.length === 0)
+   noteArray.push(0);
+   body.id = noteArray[0];
+   noteArray[0]++;
+   
    noteArray.push(addNote);
    fs.writeFileSync(
        path.join(__dirname, './db/db.json'),
